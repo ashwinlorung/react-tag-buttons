@@ -1,0 +1,20 @@
+
+.selectable-tag {
+  height: 30px;
+  border: 1px solid #9B9B9B;
+  border-radius: 20px;
+  background-color: #FFFFFF;
+  display: inline-block;
+  padding: 0 20px;
+  margin: 0 15px 25px 0;
+  color: #9B9B9B;
+  cursor: pointer; }
+  .selectable-tag.selected {
+    border: 1px solid #4039CB;
+    color: #4039CB; }
+
+.selectable-tag-content {
+  font: normal 14px/30px MuseoSans-300; }
+
+.selectable-tags-list {
+  margin: 15px; }
