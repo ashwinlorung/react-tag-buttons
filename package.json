@@ -14,8 +14,15 @@
     "url": "git+https://github.com/AshwinDfd/react-tag-buttons.git"
   },
   "keywords": [
-    "\"tag",
-    "button\""
+    "react tags",
+    "react tag buttons",
+    "react tags list",
+    "react selectable tags",
+    "tag-buttons",
+    "tag buttons",
+    "selectable tags",
+    "tags list",
+    "selectable tags list"
   ],
   "author": "Ashwin Rai <ashwinrainu@gmail.com> (ashwinrai.com)",
   "license": "ISC",
