@@ -1,6 +1,6 @@
 {
   "name": "react-tag-buttons",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A simple tags list where tags can be toggled between selected and deselected state like radio buttons",
   "main": "lib/js/TagButtons.js",
   "scripts": {
