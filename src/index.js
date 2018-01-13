@@ -10,12 +10,15 @@ const tagsList = [
     {id:5, text:"Engineer"}
 ];
 
-
+function onTagClick (currSelectedState, id, text) {
+    alert("tag clicked " + currSelectedState + id + text);
+}
 
 ReactDom.render(
     <TagButtons
         dataSource={tagsList}
-        selectedDataSource={[{id:2}]}
+        selectedDataSource={[{id:2}, {id:4}]}
+        onTagClick={onTagClick}
     />,
     document.getElementById("root")
 );

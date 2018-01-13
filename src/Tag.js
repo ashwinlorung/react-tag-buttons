@@ -23,10 +23,10 @@ const Tag = (props) => {
         props.onClick(props.isSelected, props.id, props.text)
     };
 
-    const wrprClass = "selectable-tag" + ((props.isSelected)?" selected":'');
+    const wrprClass = `${props.classPrefix}-tag ${(props.isSelected)?" selected":''}`;
     return (
         <div className={wrprClass} onClick={onClick} key={props.id}>
-            <span className="selectable-tag-content">{props.text}</span>
+            <span className={`${props.classPrefix}-tag-content`}>{props.text}</span>
         </div>
     );
 };

@@ -13,8 +13,8 @@ import {PropTypes} from "prop-types";
 /* Component imports */
 import Tag from "./Tag";
 
-/* Style imports */
-import "./styles.css";
+// /* Style imports */
+// import "./styles.css";
 /*** End Imports ***/
 
 class TagButtons extends Component {
@@ -27,11 +27,12 @@ class TagButtons extends Component {
                 dataSource,
                 dataSourceConfig,
                 selectedDataSource,
-                onTagClick
+                onTagClick,
+                classPrefix
             } = this.props
         ;
         return (
-            <div className={"selectable-tags-list"}>
+            <div className={`${classPrefix}-tags-list`}>
                 {
                     dataSource.map((item, index)=>{
                         let child;
@@ -43,7 +44,8 @@ class TagButtons extends Component {
                         const childProps = {
                             index: index,
                             onClick: onTagClick,
-                            isSelected: !!(selectedDataSource.find((selectedItem)=>{return (item[dataSourceConfig.id] === selectedItem[dataSourceConfig.id]);})),
+                            isSelected: !!(selectedDataSource.find((selectedItem)=>(item[dataSourceConfig.id] === selectedItem[dataSourceConfig.id]))),
+                            classPrefix: classPrefix,
                             ...child.props
                         };
                         return cloneElement(child, childProps);
@@ -54,17 +56,19 @@ class TagButtons extends Component {
     }
 }
 
-TagButtons.PropTypes = {
+TagButtons.propTypes = {
     dataSource: PropTypes.array.isRequired,
     dataSourceConfig: PropTypes.object,
     selectedDataSource: PropTypes.array,
-    onTagClick: PropTypes.func
+    onTagClick: PropTypes.func,
+    classPrefix: PropTypes.string
 };
 
 TagButtons.defaultProps = {
     dataSource: [],
     dataSourceConfig: {id: "id", text: "text", view: "view"},
-    selectedDataSource: []
+    selectedDataSource: [],
+    classPrefix: "selectable"
 };
 
 export default TagButtons;
